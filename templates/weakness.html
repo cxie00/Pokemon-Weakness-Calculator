@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Weakness Calculator{% endblock %}
+
+{% block content %}
+
+<div class="pokeweakness">
+    <br>
+    <form action="/weakness" method="POST" class="form-inline my-2 my-lg-0 justify-content-center">
+        <input class="form-control mr-sm-2" type="search" name="pokemon" id="pokemon-color" placeholder="Pokemon name" required>
+        <button class="btn btn-danger my-2 my-sm-0" type="submit">Submit</button>       
+    </form>  
+    <br>
+    <br>
+    {% if error %}
+    <div class="pokedisplay">
+        <h2 style="color: #dd7e6b;">Sorry, we couldn't find that. Try its ID? </h2>
+    </div>
+    {% endif %}
+    {% if error is not defined %}
+    <div class="pokedisplay">
+        <div class="poketext">
+            <h1> {{content}}</h1>
+            <br>
+            <div>
+                <h2 id="info"> Immune to: </h2>
+                <ul>
+                    <li> {{immunities}}</li>
+                </ul>
+                <h2 id="info"> 2x weak to: </h2>
+                <ul>
+                    <li> {{double_damage }}</li>
+                </ul>
+                <h2 id="info"> 4x weak to: </h2>
+                <ul>
+                    <li> {{quad_damage}} </li>
+                </ul>
+            </div>
+        </div>
+        <img id="pokepic" src={{pic}} alt="This is where an image would go">
+    </div>
+</div>
+{% endif %}
+<br>
+<br>
+{% endblock %}
