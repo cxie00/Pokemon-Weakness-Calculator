@@ -1,0 +1,56 @@
+body {
+    background-color: #FFF0B5;
+  }
+  h1 {
+    text-shadow: -6px 0px #dd7e6b;
+    color: #f4cccc;
+    font-size: 400%;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+  }
+  h1:hover{
+    color: #c3d3ff;
+    text-shadow: -6px 0px #d591e2;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .main {
+    color: #dd7e6b;   
+    text-align: center;         
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    height: 600px;
+    /* flex box centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pokedisplay {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:center;
+    width:inherit;
+
+  }
+  .pokeweakness {
+    align-items: center;
+    margin-left: 50px
+  }
+  .pokepic {
+    height: 30%;
+    width: 30%;
+    align-self: center;
+  }
+  .navbar {
+    background-color: #dd7e6b;
+    font-family: Courier;
+    font-size: 125%;
+  }
+  .propic {
+    height: 20%;
+    width: 20%;
+  }
