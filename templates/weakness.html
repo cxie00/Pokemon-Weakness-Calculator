@@ -8,42 +8,47 @@
     <br>
     <form action="/weakness" method="POST" class="form-inline my-2 my-lg-0 justify-content-center">
         <input class="form-control mr-sm-2" type="search" name="pokemon" id="pokemon-color" placeholder="Pokemon name" required>
-        <button class="btn btn-danger my-2 my-sm-0" type="submit">Submit</button>       
+        <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>       
     </form>  
     {% if error %}
     <div class="pokedisplay">
-        <h2 style="color: #dd7e6b;">Sorry, we couldn't find that. Try its ID? </h2>
+        <h2>Sorry, we couldn't find that. Try its ID? </h2>
     </div>
     {% endif %}
     {% if error is not defined %}
     <div class="container" style="color: #dd7e6b; text-align: center;">
         <div class="row">
           <div class="col"> <h1> {{content}}</h1> </div>
-          
-        
         </div>
-        <div><img class="pokepic mt-3 mb-3" src={{pic}} alt="This is where an image would go"></div>
+        <div class="row">
+            <div class="col"> <h2>type: {{usrTypes}}</h2> </div>
+        </div>
+        <div><img class="pokepic mt-2 mb-3" src={{pic}} alt="This is where an image would go"></div>
         <div class="row"> 
-            <div class="col-sm" "><h2> Immune to: </h2>
-                {% for immunity in immunities %}
-                <ul> 
-                    <li> 
+            <div class="col-sm"><h2> immune to: </h2>
+                {% for immunity in collection[0] %}
+                <ul id = "typeList"> 
+                    <li style="color: {{collection[0].get(immunity)}}"> 
                         {{ immunity }}
                     </li> 
                 </ul>
                 {% endfor %}
             </div>
             <div class="col-sm"><h2> 2x weak to: </h2>
-                {% for double in double_damage %}
-                <ul>
-                    <li> {{ double }}</li>
+                {% for double in collection[1] %}
+                <ul id = "typeList">
+                    <li style="color: {{collection[1].get(double)}}"> 
+                        {{ double }}
+                    </li>
                 </ul>
                 {% endfor %}
             </div>
             <div class="col-sm"><h2> 4x weak to: </h2>
-                {% for quad in quad_damage %}
-                <ul>
-                    <li> {{ quad }}</li>
+                {% for quad in collection[2] %}
+                <ul id = "typeList">
+                    <li  style="color: {{collection[2].get(quad)}}"> 
+                        {{ quad }}
+                    </li>
                 </ul>
                 {% endfor %}
             </div>

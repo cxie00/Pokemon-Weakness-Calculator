@@ -4,75 +4,11 @@
         <title>{% block title%}{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="Chloe Xie">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <style>
-          body {
-            background-color: #FFF0B5;
-          }
-          h1 {
-            text-shadow: -6px 0px #dd7e6b;
-            color: #f4cccc;
-            font-size: 400%;
-            text-decoration: underline;
-            font-weight: bold;
-            text-align: center;
-          }
-          h1:hover{
-            color: #c3d3ff;
-            text-shadow: -6px 0px #d591e2;
-          }
-          h2 {
-            font-weight: bold;
-            
-          }
-          .main {
-            color: #dd7e6b;   
-            text-align: center;         
-            font-family: Arial, Helvetica, sans-serif;
-            font-style: italic;
-            height: 600px;
-            /* flex box centering */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
-          .pokedisplay {
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:center;
-            width:inherit;
-            /*background-color: black;*/
-          }
-          .pokeweakness {
-            align-items: center;
-            margin-left: 50px
-          }
-
-          #pokepic {
-            height: 30%;
-            width: 30%;
-            
-          }
-          #info {
-            margin-right: 200px;
-            color: #dd7e6b;
-            
-          }
-          .navbar {
-            background-color: #dd7e6b;
-            font-family: Courier;
-            font-size: 125%;
-          }
-          #footer {
-           /* background-color: #dd7e6b;*/
-            margin-bottom: 0;
-          }
-        </style>
-      </head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+    </head>
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark nav-tabs">
         <a class="navbar-brand" href="/"><img src="static/Dream_Heal_Ball_Sprite.png" width="30" height="30" alt="Flask"></a>
@@ -94,9 +30,8 @@
       </nav>
 
       {% block content %} {% endblock %}
-      <div id="footer" class="footer-copyright text-center py-3"> Chloe Xie 2020:
-        <a href="https://github.com/cxie00"> Github</a>
-      </div>
+     
+      
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

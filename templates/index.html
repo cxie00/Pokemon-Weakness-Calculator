@@ -7,14 +7,16 @@
 {% block content %}
 <div class= "main"> 
   <img src="static/Dream_Heal_Ball_Sprite.png">
+
   <h1>Pokemon Weakness Calculator</h1>
   <h2>Search for a Pokemon by name or number</h2>
+
   <form action="/weakness" method="POST" class="form-inline my-2 my-lg-0 row justify-content-center">
     <input class="form-control mr-sm-2" type="search" name="pokemon" id="pokemon-color" placeholder="Pokemon name" required>
     {% if error is defined %}
         <div style="color: red;">{{ error.error }}</div>
     {% endif %}
-    <button class="btn btn-danger my-2 my-sm-0" type="submit">Submit</button>        
+    <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>        
 </form>
 </div>
 {% endblock %} 

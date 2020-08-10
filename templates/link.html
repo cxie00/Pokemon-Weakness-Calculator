@@ -3,9 +3,44 @@
 {% block title %}About me{% endblock %}
 
 {% block content %}
-<div class= "main"> 
-  <h1> HOW DO I GET MY SCRIPT ON MY WEBPAGE</h1>
-  <h2> Might have to rewrite it all in JS...</h2>
-  <h3> But at least I'm trying out Flask and working on front end stuff</h3>
-</div>s
+<style> 
+  .btn {
+    font-family: monospace;
+    color: white;
+  }
+  .btn:hover {
+    color: white;
+  }
+  #youtube {
+    background-color: #db8c9a;
+    outline-color: #db8c9a;
+  }
+  #youtube:hover {
+    background-color: #c96f7f;
+  }
+  #github {
+    background-color: #dd7e6b;
+    outline-color: #dd7e6b;
+  }
+  #github:hover {
+    background-color: #c75d48;
+  }
+</style>
+<h1> hello!</h1>
+<div class="pokedisplay mt-4"> 
+  <img class="propic mb-3" src="static/propic.JPG" alt="pic of me!">
+  <div class="ml-4" style="color: #dd7e6b;">
+      <div>
+          <h2>I'm Chloe, and I'm pursuing a B.S. at UMass Amherst. </h1>
+          <br>
+          <h2> I made this calculator with PokeAPI, Flask, and HTML/CSS. </h2>
+      </div>
+  </div>
+</div>
+<div> 
+    <a class="btn  btn-lg btn-block" id="youtube" href="https://www.youtube.com/user/SupersushiBlues/" role="button">Youtube</a>
+    <a class="btn  btn-lg btn-block" id ="github" href="https://github.com/cxie00" role="button">Github</a>
+    <a class="btn btn-danger btn-lg btn-block" id= "ig" href="https://www.instagram.com/coldnsalty/" role="button">Art</a>
+</div>
+  
 {% endblock %} 
