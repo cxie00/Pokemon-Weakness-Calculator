@@ -1,4 +1,4 @@
-<h1> Pokemon-Weakness-Calculator-Website </h1>
+<h1> Pokemon-Weakness-Calculator-Web </h1>
 
 
 <p>A Pokemon Weakness Calculator with PokeAPI, Flask, Bootstrap, and HTML/CSS.</p>
